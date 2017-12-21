@@ -1,13 +1,7 @@
-<section ng-controller="HomeCtrl as home">
-    <div class="navbar">
-        <h1>Bloc Chat</h1>
-        <!-- <h3>Room 1</h3>
-    
-        <h3>Room 2</h3>
-    
-        <h3>Room 3</h3> -->
-    
-        <h3 ng-repeat="room in home.rooms track by $index">Room {{ ($index + 1) }}</h3>
-    
+<div class="room-nav">
+    <h1>Bloc Chat</h1>
+    <span class="new-room-button" type="button" ng-click="home.addRoom()">New Room</span>
+    <div ng-repeat="room in home.rooms">
+        <h3>{{ room.name }}</h3>
     </div>
-</section>
+</div>
