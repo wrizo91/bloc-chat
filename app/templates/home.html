@@ -1,9 +1,13 @@
-<section>
-  <div>
-
-    <h1>Bloc Chat</h1>
+<section ng-controller="HomeCtrl as home">
+    <div class="navbar">
+        <h1>Bloc Chat</h1>
+        <!-- <h3>Room 1</h3>
     
-    <h2 ng-repeat="room in home.rooms">{{ room.$value }}</h2>
+        <h3>Room 2</h3>
     
-  </div>
+        <h3>Room 3</h3> -->
+    
+        <h3 ng-repeat="room in home.rooms track by $index">Room {{ ($index + 1) }}</h3>
+    
+    </div>
 </section>
